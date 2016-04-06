@@ -10,7 +10,7 @@ namespace Laboratorio02Clase04
     {
         public float cantidadDeMetros;
 
-        private Metro(float cantidadDeMetros):this()
+        private Metro(float cantidadDeMetros)
         {
             this.cantidadDeMetros = cantidadDeMetros;
         }

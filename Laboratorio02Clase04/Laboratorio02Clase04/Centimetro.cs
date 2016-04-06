@@ -10,7 +10,7 @@ namespace Laboratorio02Clase04
     {
         public float cantidadDeCentimetros;
 
-        private Centimetro(float cantidadDeCentimetros):this()
+        private Centimetro(float cantidadDeCentimetros)
         {
             this.cantidadDeCentimetros = cantidadDeCentimetros;
         }
@@ -47,7 +47,8 @@ namespace Laboratorio02Clase04
 
         public static bool operator ==(Centimetro dosC, Metro unoM)
         {
-            bool comparacion = dosC.cantidadDeCentimetros == unoM.cantidadDeMetros * 100;
+            
+            bool comparacion = dosC.cantidadDeCentimetros == unoM.cantidadDeMetros;
 
             return comparacion;
         }
@@ -58,9 +59,16 @@ namespace Laboratorio02Clase04
             return !(dosC == unoM);
         }
 
+        //
         public static implicit operator Centimetro(float num)
         {
             return new Centimetro(num);
+        }
+
+        //metodo estatico que devuelve una instancia, puedo acceder al objeto
+        public static Centimetro devolverUnCentimetro()
+        {
+            return new Centimetro();
         }
     }
 }
